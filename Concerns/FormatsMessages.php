@@ -1,10 +1,10 @@
 <?php
 
-namespace Illuminate\Validation\Concerns;
+namespace WPWhales\Validation\Concerns;
 
 use Closure;
-use Illuminate\Support\Arr;
-use Illuminate\Support\Str;
+use WPWhales\Support\Arr;
+use WPWhales\Support\Str;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 trait FormatsMessages
@@ -490,7 +490,7 @@ trait FormatsMessages
      * @param  string  $attribute
      * @param  string  $rule
      * @param  array  $parameters
-     * @param  \Illuminate\Validation\Validator  $validator
+     * @param  \WPWhales\Validation\Validator  $validator
      * @return string|null
      */
     protected function callReplacer($message, $attribute, $rule, $parameters, $validator)
@@ -512,7 +512,7 @@ trait FormatsMessages
      * @param  string  $attribute
      * @param  string  $rule
      * @param  array  $parameters
-     * @param  \Illuminate\Validation\Validator  $validator
+     * @param  \WPWhales\Validation\Validator  $validator
      * @return string
      */
     protected function callClassBasedReplacer($callback, $message, $attribute, $rule, $parameters, $validator)

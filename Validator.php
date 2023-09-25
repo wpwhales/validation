@@ -1,20 +1,20 @@
 <?php
 
-namespace Illuminate\Validation;
+namespace WPWhales\Validation;
 
 use BadMethodCallException;
-use Illuminate\Contracts\Container\Container;
-use Illuminate\Contracts\Translation\Translator;
-use Illuminate\Contracts\Validation\DataAwareRule;
-use Illuminate\Contracts\Validation\ImplicitRule;
-use Illuminate\Contracts\Validation\Rule as RuleContract;
-use Illuminate\Contracts\Validation\Validator as ValidatorContract;
-use Illuminate\Contracts\Validation\ValidatorAwareRule;
-use Illuminate\Support\Arr;
-use Illuminate\Support\Fluent;
-use Illuminate\Support\MessageBag;
-use Illuminate\Support\Str;
-use Illuminate\Support\ValidatedInput;
+use WPWhales\Contracts\Container\Container;
+use WPWhales\Contracts\Translation\Translator;
+use WPWhales\Contracts\Validation\DataAwareRule;
+use WPWhales\Contracts\Validation\ImplicitRule;
+use WPWhales\Contracts\Validation\Rule as RuleContract;
+use WPWhales\Contracts\Validation\Validator as ValidatorContract;
+use WPWhales\Contracts\Validation\ValidatorAwareRule;
+use WPWhales\Support\Arr;
+use WPWhales\Support\Fluent;
+use WPWhales\Support\MessageBag;
+use WPWhales\Support\Str;
+use WPWhales\Support\ValidatedInput;
 use InvalidArgumentException;
 use RuntimeException;
 use stdClass;
@@ -28,21 +28,21 @@ class Validator implements ValidatorContract
     /**
      * The Translator implementation.
      *
-     * @var \Illuminate\Contracts\Translation\Translator
+     * @var \WPWhales\Contracts\Translation\Translator
      */
     protected $translator;
 
     /**
      * The container instance.
      *
-     * @var \Illuminate\Contracts\Container\Container
+     * @var \WPWhales\Contracts\Container\Container
      */
     protected $container;
 
     /**
      * The Presence Verifier implementation.
      *
-     * @var \Illuminate\Validation\PresenceVerifierInterface
+     * @var \WPWhales\Validation\PresenceVerifierInterface
      */
     protected $presenceVerifier;
 
@@ -63,7 +63,7 @@ class Validator implements ValidatorContract
     /**
      * The message bag instance.
      *
-     * @var \Illuminate\Support\MessageBag
+     * @var \WPWhales\Support\MessageBag
      */
     protected $messages;
 
@@ -305,7 +305,7 @@ class Validator implements ValidatorContract
     /**
      * Create a new Validator instance.
      *
-     * @param  \Illuminate\Contracts\Translation\Translator  $translator
+     * @param  \WPWhales\Contracts\Translation\Translator  $translator
      * @param  array  $data
      * @param  array  $rules
      * @param  array  $messages
@@ -507,7 +507,7 @@ class Validator implements ValidatorContract
      *
      * @return array
      *
-     * @throws \Illuminate\Validation\ValidationException
+     * @throws \WPWhales\Validation\ValidationException
      */
     public function validate()
     {
@@ -522,7 +522,7 @@ class Validator implements ValidatorContract
      * @param  string  $errorBag
      * @return array
      *
-     * @throws \Illuminate\Validation\ValidationException
+     * @throws \WPWhales\Validation\ValidationException
      */
     public function validateWithBag(string $errorBag)
     {
@@ -539,7 +539,7 @@ class Validator implements ValidatorContract
      * Get a validated input container for the validated input.
      *
      * @param  array|null  $keys
-     * @return \Illuminate\Support\ValidatedInput|array
+     * @return \WPWhales\Support\ValidatedInput|array
      */
     public function safe(array $keys = null)
     {
@@ -553,7 +553,7 @@ class Validator implements ValidatorContract
      *
      * @return array
      *
-     * @throws \Illuminate\Validation\ValidationException
+     * @throws \WPWhales\Validation\ValidationException
      */
     public function validated()
     {
@@ -818,7 +818,7 @@ class Validator implements ValidatorContract
      *
      * @param  string  $attribute
      * @param  mixed  $value
-     * @param  \Illuminate\Contracts\Validation\Rule  $rule
+     * @param  \WPWhales\Contracts\Validation\Rule  $rule
      * @return void
      */
     protected function validateUsingCustomRule($attribute, $value, $rule)
@@ -992,7 +992,7 @@ class Validator implements ValidatorContract
     /**
      * Get the message container for the validator.
      *
-     * @return \Illuminate\Support\MessageBag
+     * @return \WPWhales\Support\MessageBag
      */
     public function messages()
     {
@@ -1006,7 +1006,7 @@ class Validator implements ValidatorContract
     /**
      * An alternative more semantic shortcut to the message container.
      *
-     * @return \Illuminate\Support\MessageBag
+     * @return \WPWhales\Support\MessageBag
      */
     public function errors()
     {
@@ -1016,7 +1016,7 @@ class Validator implements ValidatorContract
     /**
      * Get the messages for the instance.
      *
-     * @return \Illuminate\Support\MessageBag
+     * @return \WPWhales\Support\MessageBag
      */
     public function getMessageBag()
     {
@@ -1216,7 +1216,7 @@ class Validator implements ValidatorContract
      * Get the data that should be injected into the iteration of a wildcard "sometimes" callback.
      *
      * @param  string  $attribute
-     * @return \Illuminate\Support\Fluent|array|mixed
+     * @return \WPWhales\Support\Fluent|array|mixed
      */
     private function dataForSometimesIteration(string $attribute, $removeLastSegmentOfAttribute)
     {
@@ -1453,7 +1453,7 @@ class Validator implements ValidatorContract
      * Get the Presence Verifier implementation.
      *
      * @param  string|null  $connection
-     * @return \Illuminate\Validation\PresenceVerifierInterface
+     * @return \WPWhales\Validation\PresenceVerifierInterface
      *
      * @throws \RuntimeException
      */
@@ -1473,7 +1473,7 @@ class Validator implements ValidatorContract
     /**
      * Set the Presence Verifier implementation.
      *
-     * @param  \Illuminate\Validation\PresenceVerifierInterface  $presenceVerifier
+     * @param  \WPWhales\Validation\PresenceVerifierInterface  $presenceVerifier
      * @return void
      */
     public function setPresenceVerifier(PresenceVerifierInterface $presenceVerifier)
@@ -1518,7 +1518,7 @@ class Validator implements ValidatorContract
     /**
      * Get the Translator implementation.
      *
-     * @return \Illuminate\Contracts\Translation\Translator
+     * @return \WPWhales\Contracts\Translation\Translator
      */
     public function getTranslator()
     {
@@ -1528,7 +1528,7 @@ class Validator implements ValidatorContract
     /**
      * Set the Translator implementation.
      *
-     * @param  \Illuminate\Contracts\Translation\Translator  $translator
+     * @param  \WPWhales\Contracts\Translation\Translator  $translator
      * @return void
      */
     public function setTranslator(Translator $translator)
@@ -1539,7 +1539,7 @@ class Validator implements ValidatorContract
     /**
      * Set the IoC container instance.
      *
-     * @param  \Illuminate\Contracts\Container\Container  $container
+     * @param  \WPWhales\Contracts\Container\Container  $container
      * @return void
      */
     public function setContainer(Container $container)

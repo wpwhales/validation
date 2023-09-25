@@ -1,16 +1,16 @@
 <?php
 
-namespace Illuminate\Validation;
+namespace WPWhales\Validation;
 
 use Closure;
-use Illuminate\Database\ConnectionResolverInterface;
+use WPWhales\Database\ConnectionResolverInterface;
 
 class DatabasePresenceVerifier implements DatabasePresenceVerifierInterface
 {
     /**
      * The database connection instance.
      *
-     * @var \Illuminate\Database\ConnectionResolverInterface
+     * @var \WPWhales\Database\ConnectionResolverInterface
      */
     protected $db;
 
@@ -24,7 +24,7 @@ class DatabasePresenceVerifier implements DatabasePresenceVerifierInterface
     /**
      * Create a new database presence verifier.
      *
-     * @param  \Illuminate\Database\ConnectionResolverInterface  $db
+     * @param  \WPWhales\Database\ConnectionResolverInterface  $db
      * @return void
      */
     public function __construct(ConnectionResolverInterface $db)
@@ -73,9 +73,9 @@ class DatabasePresenceVerifier implements DatabasePresenceVerifierInterface
     /**
      * Add the given conditions to the query.
      *
-     * @param  \Illuminate\Database\Query\Builder  $query
+     * @param  \WPWhales\Database\Query\Builder  $query
      * @param  array  $conditions
-     * @return \Illuminate\Database\Query\Builder
+     * @return \WPWhales\Database\Query\Builder
      */
     protected function addConditions($query, $conditions)
     {
@@ -95,7 +95,7 @@ class DatabasePresenceVerifier implements DatabasePresenceVerifierInterface
     /**
      * Add a "where" clause to the given query.
      *
-     * @param  \Illuminate\Database\Query\Builder  $query
+     * @param  \WPWhales\Database\Query\Builder  $query
      * @param  string  $key
      * @param  string  $extraValue
      * @return void
@@ -117,7 +117,7 @@ class DatabasePresenceVerifier implements DatabasePresenceVerifierInterface
      * Get a query builder for the given table.
      *
      * @param  string  $table
-     * @return \Illuminate\Database\Query\Builder
+     * @return \WPWhales\Database\Query\Builder
      */
     protected function table($table)
     {

@@ -1,14 +1,14 @@
 <?php
 
-namespace Illuminate\Validation;
+namespace WPWhales\Validation;
 
-use Illuminate\Contracts\Validation\DataAwareRule;
-use Illuminate\Contracts\Validation\ImplicitRule;
-use Illuminate\Contracts\Validation\InvokableRule;
-use Illuminate\Contracts\Validation\Rule;
-use Illuminate\Contracts\Validation\ValidationRule;
-use Illuminate\Contracts\Validation\ValidatorAwareRule;
-use Illuminate\Translation\CreatesPotentiallyTranslatedStrings;
+use WPWhales\Contracts\Validation\DataAwareRule;
+use WPWhales\Contracts\Validation\ImplicitRule;
+use WPWhales\Contracts\Validation\InvokableRule;
+use WPWhales\Contracts\Validation\Rule;
+use WPWhales\Contracts\Validation\ValidationRule;
+use WPWhales\Contracts\Validation\ValidatorAwareRule;
+use WPWhales\Translation\CreatesPotentiallyTranslatedStrings;
 
 class InvokableValidationRule implements Rule, ValidatorAwareRule
 {
@@ -17,7 +17,7 @@ class InvokableValidationRule implements Rule, ValidatorAwareRule
     /**
      * The invokable that validates the attribute.
      *
-     * @var \Illuminate\Contracts\Validation\ValidationRule|\Illuminate\Contracts\Validation\InvokableRule
+     * @var \WPWhales\Contracts\Validation\ValidationRule|\WPWhales\Contracts\Validation\InvokableRule
      */
     protected $invokable;
 
@@ -38,7 +38,7 @@ class InvokableValidationRule implements Rule, ValidatorAwareRule
     /**
      * The current validator.
      *
-     * @var \Illuminate\Validation\Validator
+     * @var \WPWhales\Validation\Validator
      */
     protected $validator;
 
@@ -52,7 +52,7 @@ class InvokableValidationRule implements Rule, ValidatorAwareRule
     /**
      * Create a new explicit Invokable validation rule.
      *
-     * @param  \Illuminate\Contracts\Validation\ValidationRule|\Illuminate\Contracts\Validation\InvokableRule  $invokable
+     * @param  \WPWhales\Contracts\Validation\ValidationRule|\WPWhales\Contracts\Validation\InvokableRule  $invokable
      * @return void
      */
     protected function __construct(ValidationRule|InvokableRule $invokable)
@@ -63,8 +63,8 @@ class InvokableValidationRule implements Rule, ValidatorAwareRule
     /**
      * Create a new implicit or explicit Invokable validation rule.
      *
-     * @param  \Illuminate\Contracts\Validation\ValidationRule|\Illuminate\Contracts\Validation\InvokableRule  $invokable
-     * @return \Illuminate\Contracts\Validation\Rule
+     * @param  \WPWhales\Contracts\Validation\ValidationRule|\WPWhales\Contracts\Validation\InvokableRule  $invokable
+     * @return \WPWhales\Contracts\Validation\Rule
      */
     public static function make($invokable)
     {
@@ -111,7 +111,7 @@ class InvokableValidationRule implements Rule, ValidatorAwareRule
     /**
      * Get the underlying invokable rule.
      *
-     * @return \Illuminate\Contracts\Validation\ValidationRule|\Illuminate\Contracts\Validation\InvokableRule
+     * @return \WPWhales\Contracts\Validation\ValidationRule|\WPWhales\Contracts\Validation\InvokableRule
      */
     public function invokable()
     {
@@ -144,7 +144,7 @@ class InvokableValidationRule implements Rule, ValidatorAwareRule
     /**
      * Set the current validator.
      *
-     * @param  \Illuminate\Validation\Validator  $validator
+     * @param  \WPWhales\Validation\Validator  $validator
      * @return $this
      */
     public function setValidator($validator)

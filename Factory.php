@@ -1,33 +1,33 @@
 <?php
 
-namespace Illuminate\Validation;
+namespace WPWhales\Validation;
 
 use Closure;
-use Illuminate\Contracts\Container\Container;
-use Illuminate\Contracts\Translation\Translator;
-use Illuminate\Contracts\Validation\Factory as FactoryContract;
-use Illuminate\Support\Str;
+use WPWhales\Contracts\Container\Container;
+use WPWhales\Contracts\Translation\Translator;
+use WPWhales\Contracts\Validation\Factory as FactoryContract;
+use WPWhales\Support\Str;
 
 class Factory implements FactoryContract
 {
     /**
      * The Translator implementation.
      *
-     * @var \Illuminate\Contracts\Translation\Translator
+     * @var \WPWhales\Contracts\Translation\Translator
      */
     protected $translator;
 
     /**
      * The Presence Verifier implementation.
      *
-     * @var \Illuminate\Validation\PresenceVerifierInterface
+     * @var \WPWhales\Validation\PresenceVerifierInterface
      */
     protected $verifier;
 
     /**
      * The IoC container instance.
      *
-     * @var \Illuminate\Contracts\Container\Container|null
+     * @var \WPWhales\Contracts\Container\Container|null
      */
     protected $container;
 
@@ -83,8 +83,8 @@ class Factory implements FactoryContract
     /**
      * Create a new Validator factory instance.
      *
-     * @param  \Illuminate\Contracts\Translation\Translator  $translator
-     * @param  \Illuminate\Contracts\Container\Container|null  $container
+     * @param  \WPWhales\Contracts\Translation\Translator  $translator
+     * @param  \WPWhales\Contracts\Container\Container|null  $container
      * @return void
      */
     public function __construct(Translator $translator, Container $container = null)
@@ -100,7 +100,7 @@ class Factory implements FactoryContract
      * @param  array  $rules
      * @param  array  $messages
      * @param  array  $attributes
-     * @return \Illuminate\Validation\Validator
+     * @return \WPWhales\Validation\Validator
      */
     public function make(array $data, array $rules, array $messages = [], array $attributes = [])
     {
@@ -138,7 +138,7 @@ class Factory implements FactoryContract
      * @param  array  $attributes
      * @return array
      *
-     * @throws \Illuminate\Validation\ValidationException
+     * @throws \WPWhales\Validation\ValidationException
      */
     public function validate(array $data, array $rules, array $messages = [], array $attributes = [])
     {
@@ -152,7 +152,7 @@ class Factory implements FactoryContract
      * @param  array  $rules
      * @param  array  $messages
      * @param  array  $attributes
-     * @return \Illuminate\Validation\Validator
+     * @return \WPWhales\Validation\Validator
      */
     protected function resolve(array $data, array $rules, array $messages, array $attributes)
     {
@@ -166,7 +166,7 @@ class Factory implements FactoryContract
     /**
      * Add the extensions to a validator instance.
      *
-     * @param  \Illuminate\Validation\Validator  $validator
+     * @param  \WPWhales\Validation\Validator  $validator
      * @return void
      */
     protected function addExtensions(Validator $validator)
@@ -282,7 +282,7 @@ class Factory implements FactoryContract
     /**
      * Get the Translator implementation.
      *
-     * @return \Illuminate\Contracts\Translation\Translator
+     * @return \WPWhales\Contracts\Translation\Translator
      */
     public function getTranslator()
     {
@@ -292,7 +292,7 @@ class Factory implements FactoryContract
     /**
      * Get the Presence Verifier implementation.
      *
-     * @return \Illuminate\Validation\PresenceVerifierInterface
+     * @return \WPWhales\Validation\PresenceVerifierInterface
      */
     public function getPresenceVerifier()
     {
@@ -302,7 +302,7 @@ class Factory implements FactoryContract
     /**
      * Set the Presence Verifier implementation.
      *
-     * @param  \Illuminate\Validation\PresenceVerifierInterface  $presenceVerifier
+     * @param  \WPWhales\Validation\PresenceVerifierInterface  $presenceVerifier
      * @return void
      */
     public function setPresenceVerifier(PresenceVerifierInterface $presenceVerifier)
@@ -313,7 +313,7 @@ class Factory implements FactoryContract
     /**
      * Get the container instance used by the validation factory.
      *
-     * @return \Illuminate\Contracts\Container\Container|null
+     * @return \WPWhales\Contracts\Container\Container|null
      */
     public function getContainer()
     {
@@ -323,7 +323,7 @@ class Factory implements FactoryContract
     /**
      * Set the container instance used by the validation factory.
      *
-     * @param  \Illuminate\Contracts\Container\Container  $container
+     * @param  \WPWhales\Contracts\Container\Container  $container
      * @return $this
      */
     public function setContainer(Container $container)

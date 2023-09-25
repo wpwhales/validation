@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Validation\Rules;
+namespace WPWhales\Validation\Rules;
 
 use BackedEnum;
 use Stringable;
@@ -38,7 +38,7 @@ class In implements Stringable
      *
      * @return string
      *
-     * @see \Illuminate\Validation\ValidationRuleParser::parseParameters
+     * @see \WPWhales\Validation\ValidationRuleParser::parseParameters
      */
     public function __toString()
     {

@@ -1,21 +1,21 @@
 <?php
 
-namespace Illuminate\Validation;
+namespace WPWhales\Validation;
 
-use Illuminate\Contracts\Support\Arrayable;
-use Illuminate\Support\Traits\Macroable;
-use Illuminate\Validation\Rules\Can;
-use Illuminate\Validation\Rules\Dimensions;
-use Illuminate\Validation\Rules\Enum;
-use Illuminate\Validation\Rules\ExcludeIf;
-use Illuminate\Validation\Rules\Exists;
-use Illuminate\Validation\Rules\File;
-use Illuminate\Validation\Rules\ImageFile;
-use Illuminate\Validation\Rules\In;
-use Illuminate\Validation\Rules\NotIn;
-use Illuminate\Validation\Rules\ProhibitedIf;
-use Illuminate\Validation\Rules\RequiredIf;
-use Illuminate\Validation\Rules\Unique;
+use WPWhales\Contracts\Support\Arrayable;
+use WPWhales\Support\Traits\Macroable;
+use WPWhales\Validation\Rules\Can;
+use WPWhales\Validation\Rules\Dimensions;
+use WPWhales\Validation\Rules\Enum;
+use WPWhales\Validation\Rules\ExcludeIf;
+use WPWhales\Validation\Rules\Exists;
+use WPWhales\Validation\Rules\File;
+use WPWhales\Validation\Rules\ImageFile;
+use WPWhales\Validation\Rules\In;
+use WPWhales\Validation\Rules\NotIn;
+use WPWhales\Validation\Rules\ProhibitedIf;
+use WPWhales\Validation\Rules\RequiredIf;
+use WPWhales\Validation\Rules\Unique;
 
 class Rule
 {
@@ -26,7 +26,7 @@ class Rule
      *
      * @param  string  $ability
      * @param  mixed  ...$arguments
-     * @return \Illuminate\Validation\Rules\Can
+     * @return \WPWhales\Validation\Rules\Can
      */
     public static function can($ability, ...$arguments)
     {
@@ -39,7 +39,7 @@ class Rule
      * @param  callable|bool  $condition
      * @param  array|string|\Closure  $rules
      * @param  array|string|\Closure  $defaultRules
-     * @return \Illuminate\Validation\ConditionalRules
+     * @return \WPWhales\Validation\ConditionalRules
      */
     public static function when($condition, $rules, $defaultRules = [])
     {
@@ -50,7 +50,7 @@ class Rule
      * Create a new nested rule set.
      *
      * @param  callable  $callback
-     * @return \Illuminate\Validation\NestedRules
+     * @return \WPWhales\Validation\NestedRules
      */
     public static function forEach($callback)
     {
@@ -62,7 +62,7 @@ class Rule
      *
      * @param  string  $table
      * @param  string  $column
-     * @return \Illuminate\Validation\Rules\Unique
+     * @return \WPWhales\Validation\Rules\Unique
      */
     public static function unique($table, $column = 'NULL')
     {
@@ -74,7 +74,7 @@ class Rule
      *
      * @param  string  $table
      * @param  string  $column
-     * @return \Illuminate\Validation\Rules\Exists
+     * @return \WPWhales\Validation\Rules\Exists
      */
     public static function exists($table, $column = 'NULL')
     {
@@ -84,8 +84,8 @@ class Rule
     /**
      * Get an in constraint builder instance.
      *
-     * @param  \Illuminate\Contracts\Support\Arrayable|array|string  $values
-     * @return \Illuminate\Validation\Rules\In
+     * @param  \WPWhales\Contracts\Support\Arrayable|array|string  $values
+     * @return \WPWhales\Validation\Rules\In
      */
     public static function in($values)
     {
@@ -99,8 +99,8 @@ class Rule
     /**
      * Get a not_in constraint builder instance.
      *
-     * @param  \Illuminate\Contracts\Support\Arrayable|array|string  $values
-     * @return \Illuminate\Validation\Rules\NotIn
+     * @param  \WPWhales\Contracts\Support\Arrayable|array|string  $values
+     * @return \WPWhales\Validation\Rules\NotIn
      */
     public static function notIn($values)
     {
@@ -115,7 +115,7 @@ class Rule
      * Get a required_if constraint builder instance.
      *
      * @param  callable|bool  $callback
-     * @return \Illuminate\Validation\Rules\RequiredIf
+     * @return \WPWhales\Validation\Rules\RequiredIf
      */
     public static function requiredIf($callback)
     {
@@ -126,7 +126,7 @@ class Rule
      * Get a exclude_if constraint builder instance.
      *
      * @param  callable|bool  $callback
-     * @return \Illuminate\Validation\Rules\ExcludeIf
+     * @return \WPWhales\Validation\Rules\ExcludeIf
      */
     public static function excludeIf($callback)
     {
@@ -137,7 +137,7 @@ class Rule
      * Get a prohibited_if constraint builder instance.
      *
      * @param  callable|bool  $callback
-     * @return \Illuminate\Validation\Rules\ProhibitedIf
+     * @return \WPWhales\Validation\Rules\ProhibitedIf
      */
     public static function prohibitedIf($callback)
     {
@@ -148,7 +148,7 @@ class Rule
      * Get an enum constraint builder instance.
      *
      * @param  string  $type
-     * @return \Illuminate\Validation\Rules\Enum
+     * @return \WPWhales\Validation\Rules\Enum
      */
     public static function enum($type)
     {
@@ -158,7 +158,7 @@ class Rule
     /**
      * Get a file constraint builder instance.
      *
-     * @return \Illuminate\Validation\Rules\File
+     * @return \WPWhales\Validation\Rules\File
      */
     public static function file()
     {
@@ -168,7 +168,7 @@ class Rule
     /**
      * Get an image file constraint builder instance.
      *
-     * @return \Illuminate\Validation\Rules\ImageFile
+     * @return \WPWhales\Validation\Rules\ImageFile
      */
     public static function imageFile()
     {
@@ -179,7 +179,7 @@ class Rule
      * Get a dimensions constraint builder instance.
      *
      * @param  array  $constraints
-     * @return \Illuminate\Validation\Rules\Dimensions
+     * @return \WPWhales\Validation\Rules\Dimensions
      */
     public static function dimensions(array $constraints = [])
     {

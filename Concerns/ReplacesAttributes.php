@@ -1,8 +1,8 @@
 <?php
 
-namespace Illuminate\Validation\Concerns;
+namespace WPWhales\Validation\Concerns;
 
-use Illuminate\Support\Arr;
+use WPWhales\Support\Arr;
 
 trait ReplacesAttributes
 {

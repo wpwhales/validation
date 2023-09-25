@@ -1,8 +1,8 @@
 <?php
 
-namespace Illuminate\Validation\Rules;
+namespace WPWhales\Validation\Rules;
 
-use Illuminate\Support\Traits\Conditionable;
+use WPWhales\Support\Traits\Conditionable;
 use Stringable;
 
 class Exists implements Stringable

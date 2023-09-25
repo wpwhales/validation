@@ -1,15 +1,15 @@
 <?php
 
-namespace Illuminate\Validation\Rules;
+namespace WPWhales\Validation\Rules;
 
-use Illuminate\Contracts\Validation\DataAwareRule;
-use Illuminate\Contracts\Validation\Rule;
-use Illuminate\Contracts\Validation\ValidatorAwareRule;
-use Illuminate\Support\Arr;
-use Illuminate\Support\Facades\Validator;
-use Illuminate\Support\Str;
-use Illuminate\Support\Traits\Conditionable;
-use Illuminate\Support\Traits\Macroable;
+use WPWhales\Contracts\Validation\DataAwareRule;
+use WPWhales\Contracts\Validation\Rule;
+use WPWhales\Contracts\Validation\ValidatorAwareRule;
+use WPWhales\Support\Arr;
+use WPWhales\Support\Facades\Validator;
+use WPWhales\Support\Str;
+use WPWhales\Support\Traits\Conditionable;
+use WPWhales\Support\Traits\Macroable;
 use InvalidArgumentException;
 
 class File implements Rule, DataAwareRule, ValidatorAwareRule
@@ -62,7 +62,7 @@ class File implements Rule, DataAwareRule, ValidatorAwareRule
     /**
      * The validator performing the validation.
      *
-     * @var \Illuminate\Validation\Validator
+     * @var \WPWhales\Validation\Validator
      */
     protected $validator;
 
@@ -328,7 +328,7 @@ class File implements Rule, DataAwareRule, ValidatorAwareRule
     /**
      * Set the current validator.
      *
-     * @param  \Illuminate\Contracts\Validation\Validator  $validator
+     * @param  \WPWhales\Contracts\Validation\Validator  $validator
      * @return $this
      */
     public function setValidator($validator)

@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Validation\Concerns;
+namespace WPWhales\Validation\Concerns;
 
 use Egulias\EmailValidator\EmailLexer;
 use Egulias\EmailValidator\Result\InvalidEmail;

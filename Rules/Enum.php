@@ -1,8 +1,8 @@
 <?php
 
-namespace Illuminate\Validation\Rules;
+namespace WPWhales\Validation\Rules;
 
-use Illuminate\Contracts\Validation\Rule;
+use WPWhales\Contracts\Validation\Rule;
 use TypeError;
 
 class Enum implements Rule

@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Validation\Rules;
+namespace WPWhales\Validation\Rules;
 
 class ImageFile extends File
 {
@@ -17,7 +17,7 @@ class ImageFile extends File
     /**
      * The dimension constraints for the uploaded file.
      *
-     * @param  \Illuminate\Validation\Rules\Dimensions  $dimensions
+     * @param  \WPWhales\Validation\Rules\Dimensions  $dimensions
      */
     public function dimensions($dimensions)
     {

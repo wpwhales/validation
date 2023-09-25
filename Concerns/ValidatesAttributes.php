@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Validation\Concerns;
+namespace WPWhales\Validation\Concerns;
 
 use Brick\Math\BigDecimal;
 use Brick\Math\BigNumber;
@@ -15,14 +15,14 @@ use Egulias\EmailValidator\Validation\MultipleValidationWithAnd;
 use Egulias\EmailValidator\Validation\NoRFCWarningsValidation;
 use Egulias\EmailValidator\Validation\RFCValidation;
 use Exception;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Arr;
-use Illuminate\Support\Exceptions\MathException;
-use Illuminate\Support\Facades\Date;
-use Illuminate\Support\Str;
-use Illuminate\Validation\Rules\Exists;
-use Illuminate\Validation\Rules\Unique;
-use Illuminate\Validation\ValidationData;
+use WPWhales\Database\Eloquent\Model;
+use WPWhales\Support\Arr;
+use WPWhales\Support\Exceptions\MathException;
+use WPWhales\Support\Facades\Date;
+use WPWhales\Support\Str;
+use WPWhales\Validation\Rules\Exists;
+use WPWhales\Validation\Rules\Unique;
+use WPWhales\Validation\ValidationData;
 use InvalidArgumentException;
 use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\HttpFoundation\File\UploadedFile;

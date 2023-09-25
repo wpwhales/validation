@@ -1,8 +1,8 @@
 <?php
 
-namespace Illuminate\Validation;
+namespace WPWhales\Validation;
 
-use Illuminate\Support\Fluent;
+use WPWhales\Support\Fluent;
 
 class ConditionalRules
 {

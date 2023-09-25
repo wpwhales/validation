@@ -1,8 +1,8 @@
 <?php
 
-namespace Illuminate\Validation;
+namespace WPWhales\Validation;
 
-use Illuminate\Support\Arr;
+use WPWhales\Support\Arr;
 
 class ValidationData
 {

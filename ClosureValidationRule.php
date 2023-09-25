@@ -1,10 +1,10 @@
 <?php
 
-namespace Illuminate\Validation;
+namespace WPWhales\Validation;
 
-use Illuminate\Contracts\Validation\Rule as RuleContract;
-use Illuminate\Contracts\Validation\ValidatorAwareRule;
-use Illuminate\Translation\CreatesPotentiallyTranslatedStrings;
+use WPWhales\Contracts\Validation\Rule as RuleContract;
+use WPWhales\Contracts\Validation\ValidatorAwareRule;
+use WPWhales\Translation\CreatesPotentiallyTranslatedStrings;
 
 class ClosureValidationRule implements RuleContract, ValidatorAwareRule
 {
@@ -34,7 +34,7 @@ class ClosureValidationRule implements RuleContract, ValidatorAwareRule
     /**
      * The current validator.
      *
-     * @var \Illuminate\Validation\Validator
+     * @var \WPWhales\Validation\Validator
      */
     protected $validator;
 
@@ -82,7 +82,7 @@ class ClosureValidationRule implements RuleContract, ValidatorAwareRule
     /**
      * Set the current validator.
      *
-     * @param  \Illuminate\Validation\Validator  $validator
+     * @param  \WPWhales\Validation\Validator  $validator
      * @return $this
      */
     public function setValidator($validator)

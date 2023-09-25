@@ -1,11 +1,11 @@
 <?php
 
-namespace Illuminate\Validation\Rules;
+namespace WPWhales\Validation\Rules;
 
 use BackedEnum;
 use Closure;
-use Illuminate\Contracts\Support\Arrayable;
-use Illuminate\Database\Eloquent\Model;
+use WPWhales\Contracts\Support\Arrayable;
+use WPWhales\Database\Eloquent\Model;
 
 trait DatabaseRule
 {
@@ -82,7 +82,7 @@ trait DatabaseRule
      * Set a "where" constraint on the query.
      *
      * @param  \Closure|string  $column
-     * @param  \Illuminate\Contracts\Support\Arrayable|\BackedEnum|\Closure|array|string|int|bool|null  $value
+     * @param  \WPWhales\Contracts\Support\Arrayable|\BackedEnum|\Closure|array|string|int|bool|null  $value
      * @return $this
      */
     public function where($column, $value = null)
@@ -112,7 +112,7 @@ trait DatabaseRule
      * Set a "where not" constraint on the query.
      *
      * @param  string  $column
-     * @param  \Illuminate\Contracts\Support\Arrayable|\BackedEnum|array|string  $value
+     * @param  \WPWhales\Contracts\Support\Arrayable|\BackedEnum|array|string  $value
      * @return $this
      */
     public function whereNot($column, $value)
@@ -154,7 +154,7 @@ trait DatabaseRule
      * Set a "where in" constraint on the query.
      *
      * @param  string  $column
-     * @param  \Illuminate\Contracts\Support\Arrayable|\BackedEnum|array  $values
+     * @param  \WPWhales\Contracts\Support\Arrayable|\BackedEnum|array  $values
      * @return $this
      */
     public function whereIn($column, $values)
@@ -168,7 +168,7 @@ trait DatabaseRule
      * Set a "where not in" constraint on the query.
      *
      * @param  string  $column
-     * @param  \Illuminate\Contracts\Support\Arrayable|\BackedEnum|array  $values
+     * @param  \WPWhales\Contracts\Support\Arrayable|\BackedEnum|array  $values
      * @return $this
      */
     public function whereNotIn($column, $values)

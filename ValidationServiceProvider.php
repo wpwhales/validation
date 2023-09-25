@@ -1,11 +1,11 @@
 <?php
 
-namespace Illuminate\Validation;
+namespace WPWhales\Validation;
 
-use Illuminate\Contracts\Support\DeferrableProvider;
-use Illuminate\Contracts\Validation\UncompromisedVerifier;
-use Illuminate\Http\Client\Factory as HttpFactory;
-use Illuminate\Support\ServiceProvider;
+use WPWhales\Contracts\Support\DeferrableProvider;
+use WPWhales\Contracts\Validation\UncompromisedVerifier;
+use WPWhales\Http\Client\Factory as HttpFactory;
+use WPWhales\Support\ServiceProvider;
 
 class ValidationServiceProvider extends ServiceProvider implements DeferrableProvider
 {

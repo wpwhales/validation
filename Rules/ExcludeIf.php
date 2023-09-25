@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Validation\Rules;
+namespace WPWhales\Validation\Rules;
 
 use Closure;
 use InvalidArgumentException;

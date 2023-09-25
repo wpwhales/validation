@@ -1,17 +1,17 @@
 <?php
 
-namespace Illuminate\Validation;
+namespace WPWhales\Validation;
 
 use Exception;
-use Illuminate\Contracts\Validation\UncompromisedVerifier;
-use Illuminate\Support\Str;
+use WPWhales\Contracts\Validation\UncompromisedVerifier;
+use WPWhales\Support\Str;
 
 class NotPwnedVerifier implements UncompromisedVerifier
 {
     /**
      * The HTTP factory instance.
      *
-     * @var \Illuminate\Http\Client\Factory
+     * @var \WPWhales\Http\Client\Factory
      */
     protected $factory;
 
@@ -25,7 +25,7 @@ class NotPwnedVerifier implements UncompromisedVerifier
     /**
      * Create a new uncompromised verifier.
      *
-     * @param  \Illuminate\Http\Client\Factory  $factory
+     * @param  \WPWhales\Http\Client\Factory  $factory
      * @param  int|null  $timeout
      * @return void
      */
@@ -79,7 +79,7 @@ class NotPwnedVerifier implements UncompromisedVerifier
      * Search by the given hash prefix and returns all occurrences of leaked passwords.
      *
      * @param  string  $hashPrefix
-     * @return \Illuminate\Support\Collection
+     * @return \WPWhales\Support\Collection
      */
     protected function search($hashPrefix)
     {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Illuminate\Validation;
+namespace WPWhales\Validation;
 
-use Illuminate\Foundation\Precognition;
+use WPWhales\Foundation\Precognition;
 
 /**
  * Provides default implementation of ValidatesWhenResolved contract.
@@ -48,7 +48,7 @@ trait ValidatesWhenResolvedTrait
     /**
      * Get the validator instance for the request.
      *
-     * @return \Illuminate\Validation\Validator
+     * @return \WPWhales\Validation\Validator
      */
     protected function getValidatorInstance()
     {
@@ -68,10 +68,10 @@ trait ValidatesWhenResolvedTrait
     /**
      * Handle a failed validation attempt.
      *
-     * @param  \Illuminate\Validation\Validator  $validator
+     * @param  \WPWhales\Validation\Validator  $validator
      * @return void
      *
-     * @throws \Illuminate\Validation\ValidationException
+     * @throws \WPWhales\Validation\ValidationException
      */
     protected function failedValidation(Validator $validator)
     {
@@ -97,7 +97,7 @@ trait ValidatesWhenResolvedTrait
      *
      * @return void
      *
-     * @throws \Illuminate\Validation\UnauthorizedException
+     * @throws \WPWhales\Validation\UnauthorizedException
      */
     protected function failedAuthorization()
     {

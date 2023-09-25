@@ -1,17 +1,17 @@
 <?php
 
-namespace Illuminate\Validation;
+namespace WPWhales\Validation;
 
 use Exception;
-use Illuminate\Support\Arr;
-use Illuminate\Support\Facades\Validator as ValidatorFacade;
+use WPWhales\Support\Arr;
+use WPWhales\Support\Facades\Validator as ValidatorFacade;
 
 class ValidationException extends Exception
 {
     /**
      * The validator instance.
      *
-     * @var \Illuminate\Contracts\Validation\Validator
+     * @var \WPWhales\Contracts\Validation\Validator
      */
     public $validator;
 
@@ -46,7 +46,7 @@ class ValidationException extends Exception
     /**
      * Create a new exception instance.
      *
-     * @param  \Illuminate\Contracts\Validation\Validator  $validator
+     * @param  \WPWhales\Contracts\Validation\Validator  $validator
      * @param  \Symfony\Component\HttpFoundation\Response|null  $response
      * @param  string  $errorBag
      * @return void
@@ -80,7 +80,7 @@ class ValidationException extends Exception
     /**
      * Create an error message summary from the validation errors.
      *
-     * @param  \Illuminate\Contracts\Validation\Validator  $validator
+     * @param  \WPWhales\Contracts\Validation\Validator  $validator
      * @return string
      */
     protected static function summarize($validator)

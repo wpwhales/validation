@@ -1,15 +1,15 @@
 <?php
 
-namespace Illuminate\Validation;
+namespace WPWhales\Validation;
 
 use Closure;
-use Illuminate\Contracts\Validation\InvokableRule;
-use Illuminate\Contracts\Validation\Rule as RuleContract;
-use Illuminate\Contracts\Validation\ValidationRule;
-use Illuminate\Support\Arr;
-use Illuminate\Support\Str;
-use Illuminate\Validation\Rules\Exists;
-use Illuminate\Validation\Rules\Unique;
+use WPWhales\Contracts\Validation\InvokableRule;
+use WPWhales\Contracts\Validation\Rule as RuleContract;
+use WPWhales\Contracts\Validation\ValidationRule;
+use WPWhales\Support\Arr;
+use WPWhales\Support\Str;
+use WPWhales\Validation\Rules\Exists;
+use WPWhales\Validation\Rules\Unique;
 
 class ValidationRuleParser
 {

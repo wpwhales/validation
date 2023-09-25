@@ -1,15 +1,15 @@
 <?php
 
-namespace Illuminate\Validation\Rules;
+namespace WPWhales\Validation\Rules;
 
-use Illuminate\Container\Container;
-use Illuminate\Contracts\Validation\DataAwareRule;
-use Illuminate\Contracts\Validation\Rule;
-use Illuminate\Contracts\Validation\UncompromisedVerifier;
-use Illuminate\Contracts\Validation\ValidatorAwareRule;
-use Illuminate\Support\Arr;
-use Illuminate\Support\Facades\Validator;
-use Illuminate\Support\Traits\Conditionable;
+use WPWhales\Container\Container;
+use WPWhales\Contracts\Validation\DataAwareRule;
+use WPWhales\Contracts\Validation\Rule;
+use WPWhales\Contracts\Validation\UncompromisedVerifier;
+use WPWhales\Contracts\Validation\ValidatorAwareRule;
+use WPWhales\Support\Arr;
+use WPWhales\Support\Facades\Validator;
+use WPWhales\Support\Traits\Conditionable;
 use InvalidArgumentException;
 
 class Password implements Rule, DataAwareRule, ValidatorAwareRule
@@ -19,7 +19,7 @@ class Password implements Rule, DataAwareRule, ValidatorAwareRule
     /**
      * The validator performing the validation.
      *
-     * @var \Illuminate\Contracts\Validation\Validator
+     * @var \WPWhales\Contracts\Validation\Validator
      */
     protected $validator;
 
@@ -169,7 +169,7 @@ class Password implements Rule, DataAwareRule, ValidatorAwareRule
     /**
      * Set the performing validator.
      *
-     * @param  \Illuminate\Contracts\Validation\Validator  $validator
+     * @param  \WPWhales\Contracts\Validation\Validator  $validator
      * @return $this
      */
     public function setValidator($validator)

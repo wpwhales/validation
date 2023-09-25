@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\Validation\Rules;
+namespace WPWhales\Validation\Rules;
 
-use Illuminate\Contracts\Validation\Rule;
-use Illuminate\Support\Facades\Gate;
+use WPWhales\Contracts\Validation\Rule;
+use WPWhales\Support\Facades\Gate;
 
 class Can implements Rule
 {

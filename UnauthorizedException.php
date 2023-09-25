@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Validation;
+namespace WPWhales\Validation;
 
 use RuntimeException;
 

@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\Validation\Rules;
+namespace WPWhales\Validation\Rules;
 
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Traits\Conditionable;
+use WPWhales\Database\Eloquent\Model;
+use WPWhales\Support\Traits\Conditionable;
 use Stringable;
 
 class Unique implements Stringable
@@ -46,7 +46,7 @@ class Unique implements Stringable
     /**
      * Ignore the given model during the unique check.
      *
-     * @param  \Illuminate\Database\Eloquent\Model  $model
+     * @param  \WPWhales\Database\Eloquent\Model  $model
      * @param  string|null  $idColumn
      * @return $this
      */
